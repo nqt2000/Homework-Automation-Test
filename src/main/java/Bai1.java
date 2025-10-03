@@ -61,7 +61,6 @@ public class Bai1 {
         Thread.sleep(2000);
 
 
-
         // Submit cach 2
         WebElement buttonsubmit2 = driver.findElement(By.xpath("//textarea[@id='currentAddress']/parent::div/following::button[@id='submit']"));
         buttonsubmit2.click();
