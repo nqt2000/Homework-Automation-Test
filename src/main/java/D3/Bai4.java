@@ -31,8 +31,8 @@ public class Bai4 {
         }
         Thread.sleep(2000);
 
-        WebElement button1 = driver.findElement(By.xpath("(//li[@id='item-0'])[3]"));
-        button1.click();
+        WebElement button = driver.findElement(By.xpath("(//li[@id='item-0'])[3]"));
+        button.click();
         Thread.sleep(2000);
 
         js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
