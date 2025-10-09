@@ -64,18 +64,23 @@ public class Bai1 {
         js.executeScript("arguments[0].scrollIntoView(true);", resultBox);
         Thread.sleep(2000);
 
-        js.executeScript("arguments[0].style.border='3px solid red';", resultBox);
-        js.executeScript("arguments[0].style.backgroundColor='yellow';", resultBox);
+        js.executeScript(
+                "arguments[0].style.border='3px solid red'; arguments[0].style.backgroundColor='yellow';",
+                resultBox
+        );
+
+        assert resultBox.isDisplayed():"Result not displayed!";
 
         String resultText = resultBox.getText();
         System.out.println("====== Result ======");
         System.out.println(resultText);
 
-        if (resultText.contains("Dao Vinh Mai") && resultText.contains("mailtest02@gmail.com")) {
-            System.out.println("Test Passed!");
-        } else {
-            System.out.println("Test Failed");
-        }
+        assert resultText.contains("Dao Vinh Mai") : "Wrong or missing name!";
+        assert resultText.contains("mailtest02@gmail.com") : "Wrong or missing email!";
+        assert resultText.contains("Khuat Duy Tien, Trung Hoa, Cau Giay, Ha Noi") : "Wrong or missing current address!";
+        assert resultText.contains("Nguyen Chi Thanh") : "Wrong or missing permanent address!";
+
+        System.out.println("All assert finish.");
 
         Thread.sleep(2000);
         driver.quit();
