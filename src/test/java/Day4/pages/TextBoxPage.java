@@ -58,6 +58,22 @@ public class TextBoxPage {
         button.click();
     }
 
+    public String getOutputName() {
+        return driver.findElement(By.xpath("//p[@id=\"name\"]")).getText();
+    }
+
+    public String getOutputEmail() {
+        return driver.findElement(By.xpath("//p[@id=\"email\"]")).getText();
+    }
+
+    public String getOutputCurrentAddress() {
+        return driver.findElement(By.xpath("//p[@id=\"currentAddress\"]")).getText();
+    }
+
+    public String getOutputPermanentAddress() {
+        return driver.findElement(By.xpath("//p[@id=\"permanentAddress\"]")).getText();
+    }
+
     public void fillForm(String name, String mail, String currentaddress, String permanentaddress) throws InterruptedException {
         enterFullname(name);
         Thread.sleep(2000);
