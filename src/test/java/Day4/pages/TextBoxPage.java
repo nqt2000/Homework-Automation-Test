@@ -18,10 +18,9 @@ public class TextBoxPage {
         this.js = (JavascriptExecutor) driver;
     }
 
-    //Highlight
+    //Scroll
     private void Scroll(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
-//        js.executeScript("arguments[0].style.border='3px solid red'", element);
     }
 
     //Actions
