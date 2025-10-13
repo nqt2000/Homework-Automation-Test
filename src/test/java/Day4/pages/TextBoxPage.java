@@ -1,9 +1,6 @@
 package Day4.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 public class TextBoxPage {
     private final WebDriver driver;
@@ -85,5 +82,34 @@ public class TextBoxPage {
         Thread.sleep(2000);
         clickSubmit();
         Thread.sleep(5000);
+    }
+
+    // Check email border
+    public boolean isEmailBorderRed() {
+        WebElement element = driver.findElement(email);
+        Scroll(element);
+        String borderColor = element.getCssValue("border-color");
+        System.out.println("Email border color: " + borderColor);
+        return borderColor.contains("255, 0, 0");
+    }
+
+    // Check output visible
+    public boolean isOutputVisible() {
+        try {
+            WebElement output = driver.findElement(By.id("output"));
+            return output.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    // Check email visible
+    public boolean isOutputEmailVisible() {
+        try {
+            WebElement outputEmail = driver.findElement(By.id("email"));
+            return outputEmail.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 }
