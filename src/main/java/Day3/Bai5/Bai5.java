@@ -1,4 +1,4 @@
-package D3.Bai5;
+package Day3.Bai5;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

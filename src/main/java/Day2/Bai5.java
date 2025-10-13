@@ -1,4 +1,4 @@
-package D2;
+package Day2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
