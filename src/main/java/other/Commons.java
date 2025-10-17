@@ -1,4 +1,4 @@
-package Day5;
+package other;
 
 public class Commons {
     public static void main(String[] args) {

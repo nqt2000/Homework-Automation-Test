@@ -1,6 +1,6 @@
-package D4.actions;
+package D4_5.actions;
 
-import D4.locators.LoginLocator;
+import D4_5.locators.LoginLocator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

@@ -1,9 +1,9 @@
-package Day4.tests;
+package Day4_5.tests;
 
-import Day4.base.BaseTest;
-import Day4.pages.ElementsPage;
-import Day4.pages.CheckBoxPage;
-import Day4.pages.HomePage;
+import Day4_5.base.BaseTest;
+import Day4_5.pages.ElementsPage;
+import Day4_5.pages.CheckBoxPage;
+import Day4_5.pages.HomePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
