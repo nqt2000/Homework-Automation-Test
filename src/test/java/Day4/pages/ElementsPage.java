@@ -33,4 +33,10 @@ public class ElementsPage {
         driver.findElement(By.id("item-1")).click();
         Thread.sleep(2000);
     }
+
+    public void openRadioButton() throws InterruptedException {
+        expandElementsIfCollapsed();
+        driver.findElement(By.id("item-2")).click();
+        Thread.sleep(2000);
+    }
 }
